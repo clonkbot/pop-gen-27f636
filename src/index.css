@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom animations */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-slideIn {
+  animation: slideIn 0.4s ease-out;
+}
+
+/* Custom border width */
+.border-3 {
+  border-width: 3px;
+}
+
+/* Scrollbar styling for brutalist look */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F5F5F0;
+  border-left: 4px solid #000;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #000;
+  border: 2px solid #F5F5F0;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #FF006E;
+}
+
+/* Selection colors */
+::selection {
+  background: #AAFF00;
+  color: #000;
+}
+
+/* Focus styles */
+*:focus-visible {
+  outline: 4px solid #3A86FF;
+  outline-offset: 2px;
+}
+
+/* Video controls styling */
+video::-webkit-media-controls-panel {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+/* Prevent text selection on buttons */
+button {
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Mobile tap highlight */
+@media (hover: none) {
+  button:active {
+    transform: scale(0.98);
+  }
+}
